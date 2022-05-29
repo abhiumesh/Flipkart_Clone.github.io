@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:ital,wght@0,300;0,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-bg-color: #2874f0;
+  }
+header{
+    background: var(--main-bg-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+nav{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 89px;
+    padding: 0px 30px;
+}
+nav ul{
+    height: 8vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 0px 12px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 296px;
+    height: 25px;
+    border: 2px solid rgb(215, 197, 245);
+    border-radius: 8px;
+    padding: 0px 10px;
+    margin-left: 22px;
+    margin-right: 19px;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn{
+    width: 85px;
+    height: 30px;
+    font-weight: bolder;
+    border: 2px solid rgb(215, 197, 245);
+    border-radius: 8px;
+    color: #ffffff;
+    background: var(--main-bg-color);
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #ffffff;
+    color: var(--main-bg-color);
+}
+.container{
+    min-height: calc(100vh - 8vh - 8vh);
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+    overflow: hidden;
+}
+.slider img{
+    width: 1000px;
+    height: 400px;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+footer{
+    height: 8vh;
+    background: var(--main-bg-color);
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
